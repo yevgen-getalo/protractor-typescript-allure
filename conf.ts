@@ -1,6 +1,5 @@
 import { Config, browser } from 'protractor';
 import { SpecReporter } from 'jasmine-spec-reporter';
-//import { AllureReporter } from 'jasmine-allure-reporter';
 
 export let config: Config = {
     framework: 'jasmine2',
@@ -21,6 +20,5 @@ export let config: Config = {
         browser.waitForAngularEnabled(false);
         browser.ignoreSynchronization = true;
     },
-    specs: [ 'specs/**/*spec.js' ],
-    //seleniumAddress: 'http://localhost:4444/wd/hub'
+    specs: [ 'specs/**/*spec.js' ]
 };

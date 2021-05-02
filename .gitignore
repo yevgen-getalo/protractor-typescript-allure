@@ -2,3 +2,5 @@ node_modules/
 tmp/
 .vscode/
 .vscode/*
+allure-report/
+allure-results/

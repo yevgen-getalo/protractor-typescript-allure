@@ -1,5 +1,5 @@
 {
-    "name": "paxful-protractor-ts-tests",
+    "name": "protractor-ts-tests",
     "version": "1.0.0",
     "description": "Runs tests with Typescript",
     "author": {
@@ -7,29 +7,30 @@
         "email": "yevgen.getalo@gmail.com"
     },
     "scripts": {
-        "test": "protractor tmp/conf.js && npm run report",
-        "test-win": "protractor tmp/conf.js & npm run report",
+        "test": "protractor tmp/conf.js && npm run report && npm run open-report",
+        "test-win": "protractor tmp/conf.js & npm run report & npm run open-report",
         "pretest": "npm install && tsc && npm run updateWebdriverManager",
-        "pretest -win": "npm install & tsc & npm run updateWebdriverManager",
+        "pretest-win": "npm install & tsc & npm run updateWebdriverManager",
         "startServer": "./node_modules/.bin/webdriver-manager start",
         "updateWebdriverManager": "./node_modules/.bin/webdriver-manager update",
-        "report": "allure generate allure-results --clean -o allure-report || true"
+        "report": "allure generate allure-results --clean -o allure-report || true",
+        "open-report": "allure open"
     },
     "dependencies": {
         "@log4js-node/log4js-api": "^1.0.2",
-        "@types/jasmine": "~3.3.13",
-        "@types/jasminewd2": "~2.0.6",
-        "@types/node": "~12.0.8",
-        "eslint": "^5.16.0",
-        "fs-extra": "^8.0.1",
+        "@types/jasmine": "latest",
+        "@types/jasminewd2": "latest",
+        "@types/node": "latest",
+        "eslint": "latest",
+        "fs-extra": "^9.1.0",
         "jasmine": "^3.4.0",
         "jasmine-spec-reporter": "^4.2.1",
         "jasmine-allure-reporter": "1.0.2",
-        "protractor": "^5.4.2",
-        "typescript": "^3.5.2"
+        "protractor": "^7.0.0",
+        "typescript": "latest"
     },
     "devDependencies": {
-        "ts-node": "8.3.0",
-        "allure-commandline": "2.9.0"
+        "ts-node": "9.1.1",
+        "allure-commandline": "2.13.8"
     }
 }
